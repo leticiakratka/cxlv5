@@ -1,0 +1,13 @@
+{
+  "name": "cxlv5",
+  "compatibility_date": "2026-08-11",
+  "assets": {
+    "directory": "./"
+  },
+  "routes": [
+    {
+      "pattern": "cxlv5.leticiakratka.com.br",
+      "custom_domain": true
+    }
+  ]
+}

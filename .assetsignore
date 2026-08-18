@@ -1,0 +1,8 @@
+wrangler.jsonc
+.assetsignore
+.git
+.gitignore
+.wrangler
+.DS_Store
+.vscode
+*.pdf
