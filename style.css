@@ -624,7 +624,7 @@ p {
     gap: 14px;
     flex-wrap: wrap;
     font-family: var(--h);
-    font-size: clamp(1.2rem, 3vw, 30px);
+    font-size: clamp(2rem, 5.5vw, 46px);
     font-weight: 500;
     color: #fff
 }
