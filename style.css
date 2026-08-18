@@ -187,6 +187,10 @@ p {
     color: var(--texto)
 }
 
+/* negrito mediano: 700 (bold padrao do browser) fica pesado demais em Montserrat
+   dentro de paragrafo corrido; 600 destaca sem gritar */
+.txt b { font-weight: 600 }
+
 .sec--gradesc .txt,
 .sec--escuro .txt {
     color: #DCEAF3
@@ -221,6 +225,10 @@ p {
 .b {
     font-weight: 700
 }
+
+/* destaque de titulo em itálica serifada, igual ao sistema da cxlv4:
+   troca o "colorido + negrito" por um acento mais elegante e discreto */
+.it { font-family: var(--h); font-style: italic; font-weight: 400; letter-spacing: 0 }
 
 .campo {
     border-bottom: 1px dashed var(--verde)
@@ -427,23 +435,6 @@ p {
     width: 160px;
     height: 64px;
     font-size: 11px
-}
-
-/* o .logo global é um quadradinho de 35–50px com fonte de 8–10px, ilegível como
-   marca de abertura. Aqui vira um selo horizontal que cresce com o texto.
-   Escopo preso ao topo de propósito: os 3 .logo--p do meio da página herdam
-   do .logo global e mudariam junto. */
-.sec.sec--logo .logo {
-    width: auto;
-    height: auto;
-    display: inline-grid;
-    padding: clamp(9px, 2.4vw, 13px) clamp(16px, 4.2vw, 24px);
-    border-radius: 12px;
-    font-size: clamp(15px, 3.6vw, 19px);
-    letter-spacing: .08em;
-    line-height: 1.15;
-    white-space: nowrap;
-    margin-bottom: 0
 }
 
 /* faixa de checks embaixo da headline (a imagem IMG-CARTILHA-60 deles) */
