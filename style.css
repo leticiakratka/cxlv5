@@ -374,6 +374,65 @@ p {
     align-items: center
 }
 
+/* ---------- FAQ (accordion, substitui o <details> cru que ficava
+   escalonado por causa do text-align:center herdado da .sec) ---------- */
+.faq {
+    display: grid;
+    gap: 12px;
+    max-width: 760px;
+    margin-inline: auto;
+    text-align: left;
+}
+
+.faq details {
+    background: var(--branco);
+    border: 1px solid var(--linha);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 17px 46px 17px 20px;
+    font-family: var(--b);
+    font-weight: 700;
+    font-size: clamp(.95rem, 1.5vw, 16.5px);
+    color: var(--ink);
+    position: relative;
+    line-height: 1.4;
+}
+
+.faq summary::-webkit-details-marker { display: none }
+
+.faq summary::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 9px;
+    height: 9px;
+    margin-top: -6px;
+    border-right: 2px solid var(--azul);
+    border-bottom: 2px solid var(--azul);
+    transform: rotate(45deg);
+    transition: transform .2s ease;
+}
+
+.faq details[open] summary::after {
+    transform: rotate(-135deg);
+    margin-top: -2px;
+}
+
+.faq details[open] summary { color: var(--azul-d) }
+
+.faq p {
+    padding: 0 20px 19px;
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--texto);
+}
+
 .g3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
