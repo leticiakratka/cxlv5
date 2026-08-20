@@ -14,8 +14,8 @@
     <meta name="theme-color" content="#588A65">
     <title>Caixa Livre 2.0 | Faça sobrar dinheiro todo mês</title>
 
-    <link rel="preconnect" href="https://pay.voompcreators.com.br">
-    <link rel="dns-prefetch" href="https://pay.voompcreators.com.br">
+    <link rel="preconnect" href="https://chk.eduzz.com">
+    <link rel="dns-prefetch" href="https://chk.eduzz.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style"
@@ -415,7 +415,7 @@
                 <p class="avista">ou R$97 à vista</p>
                 <p class="pordia">Investimento de apenas R$0,26 por dia pra ter dinheiro sobrando</p>
 
-                <div class="cta" style="margin-top:26px"><a class="btn btn--full" href="https://pay.voompcreators.com.br/14331/offer/k2hkHP/?b_id_1=14527&b_offer_1=QowVGx&b_id_2=14525&b_offer_2=i4sTeU&ch_id=2705">QUERO MEU CAIXA LIVRE</a>
+                <div class="cta" style="margin-top:26px"><a class="btn btn--full" href="https://chk.eduzz.com/4rd6sd34">QUERO MEU CAIXA LIVRE</a>
                 </div>
 
                 <div class="hr"></div>
@@ -553,7 +553,7 @@
                 <p class="preco" style="margin-top:8px">12x de R$9,70</p>
                 <p class="avista">ou R$97 à vista</p>
 
-                <div class="cta" style="margin-top:26px"><a class="btn btn--full" href="https://pay.voompcreators.com.br/14331/offer/k2hkHP/?b_id_1=14527&b_offer_1=QowVGx&b_id_2=14525&b_offer_2=i4sTeU&ch_id=2705">QUERO MEU CAIXA LIVRE</a>
+                <div class="cta" style="margin-top:26px"><a class="btn btn--full" href="https://chk.eduzz.com/4rd6sd34">QUERO MEU CAIXA LIVRE</a>
                 </div>
 
                 <div class="hr"></div>
@@ -701,9 +701,9 @@
         });
 
         // Apply UTMs to checkout links
-        document.querySelectorAll('a.btn[href*="pay.voompcreators"]').forEach(link => {
+        document.querySelectorAll('a.btn[href*="chk.eduzz.com"]').forEach(link => {
           if (utmString) {
-            link.href = link.href + utmString;
+            link.href = link.href + (link.href.includes('?') ? utmString : '?' + utmString.slice(1));
           }
         });
       }
