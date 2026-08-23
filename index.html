@@ -784,6 +784,23 @@
         Array.prototype.forEach.call(videos, function (v) { obs.observe(v); });
       })();
     </script>
+
+    <script>
+      // rola ate a secao sem mudar a URL/historico do navegador. Um <a href="#preco">
+      // normal muda location.hash, o que dispara gtm.historyChange - e isso reativa o
+      // rastreamento de "mudanca de pagina" de pixels com push-state habilitado (Utmify,
+      // Facebook Pixel), fazendo o clique em qualquer botao contar como PageView. Rolando
+      // via JS em vez de deixar o navegador navegar pra #, a URL nunca muda e esse gatilho
+      // nunca dispara.
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var alvo = document.getElementById(this.getAttribute('href').slice(1));
+          if (!alvo) return;
+          e.preventDefault();
+          alvo.scrollIntoView();
+        });
+      });
+    </script>
 </body>
 
 </html>
