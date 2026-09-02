@@ -1020,6 +1020,33 @@ p {
     margin-inline: auto
 }
 
+/* ---------- suporte via WhatsApp (mesmo padrão das outras páginas) ---------- */
+.suporte-avatar {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, .8);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+    margin: 0 auto 14px;
+}
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: #fff;
+    font-family: var(--b);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 36px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all .3s ease;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, .35);
+}
+.btn-whatsapp:hover { background: #1fb855; transform: translateY(-2px) }
+.btn-whatsapp svg { width: 20px; height: 20px }
+
 .nota {
     max-width: var(--site);
     margin: 0 auto;
